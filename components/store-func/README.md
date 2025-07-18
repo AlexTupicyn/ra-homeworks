@@ -65,3 +65,5 @@ return (
 Реализуйте полноценный проект с помощью create-react-app. Для item можете использовать либо тип `object`, либо вынести item в класс и использовать `instanceOf`.
 
 Используйте расположенный в этом каталоге CSS для стилизации.
+
+[Решение](https://github.com/AlexTupicyn/ra-homeworks-1-1.git)
