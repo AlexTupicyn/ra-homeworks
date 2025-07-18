@@ -1,0 +1,92 @@
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
+  max-width: 280px;
+}
+
+.dropdown-button {
+  padding: 14px 20px;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  color: #24292e;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dropdown-button:hover {
+  background-color: #f6f8fa;
+  border-color: #d1d5da;
+}
+
+.dropdown-button:active {
+  background-color: #ebedef;
+}
+
+.dropdown-button::after {
+  content: "▼";
+  font-size: 10px;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-container.open .dropdown-button::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.dropdown-container.open .dropdown-list {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #24292e;
+  border-bottom: 1px solid #f0f2f5;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f6f8fa;
+  color: #0366d6;
+}
+
+.dropdown-item.selected {
+  background-color: #f0f7ff;
+  color: #0366d6;
+  font-weight: 500;
+}
