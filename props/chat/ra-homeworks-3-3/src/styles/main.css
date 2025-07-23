@@ -1,0 +1,351 @@
+/* === GLOBAL STYLES === */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #C5DDEB;
+    font: 16px/24px "Lato", Arial, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    margin-top: -15.65px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* === LAYOUT STRUCTURE === */
+.container {
+    margin: 0 auto;
+    width: 880px;
+    background: #444753;
+    border-radius: 6px;
+    display: flex;
+}
+
+/* === USER PANEL === */
+.user-panel {
+    width: 280px;
+    float: left;
+    background: #3a3d4a;
+    height: 675px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 20px 15px;
+    color: #fff;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #505364;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #a8aab1;
+}
+
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.user-list {
+    overflow-y: auto;
+    height: 600px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: -7px;
+}
+
+.user-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* === USER ITEMS === */
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 13.35px 4px;
+    border-bottom: 1px solid #505364;
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+.user-avatar {
+    position: relative;
+    margin-right: 15px;
+}
+
+.user-avatar img {
+    width: 41.5px;
+    height: 41.5px;
+    border-radius: 50%;
+    border: #686c73 2.5px solid;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 15px;
+    margin-bottom: -5px;
+}
+
+.last-seen, .status-text {
+    font-size: 13px;
+    color: #a8aab1;
+}
+
+.status-text {
+    color: #86BB71;
+}
+
+/* === CHAT AREA === */
+.chat {
+    width: 600px;
+    float: left;
+    background: #F2F5F8;
+    border-radius: 0 6px 6px 0;
+    color: #434651;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #F2F5F8;
+    border-bottom: 2px solid white;
+    border-radius: 6px 6px 0 0;
+    gap: 15px;
+}
+
+.chat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3.5px solid #86BB71;
+}
+
+.chat-header-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #434651;
+    margin-bottom: -0.5px;
+}
+
+.message-count {
+    font-size: 15.5px;
+    color: #a8aab1;
+    display: block;
+    font-weight: 500;
+}
+
+.chat .chat-history {
+    padding: 5px 0;
+    border-bottom: 2px solid white;
+    height: calc(675px - 80px);
+    overflow-y: auto;
+}
+
+/* === MESSAGES === */
+.message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 25px;
+    list-style: none;
+}
+
+.message-item {
+    clear: both;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.message-item.left .message-header {
+    justify-content: flex-start;
+}
+
+.message-item.right .message-header {
+    justify-content: flex-end;
+}
+
+.message-bubble {
+    max-width: 75%;
+    padding: 22px 25px;
+    line-height: 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    position: relative;
+    word-wrap: break-word;
+    color: white;
+    margin-top: 10px;
+}
+
+.message-item.left .message-bubble {
+    float: left;
+    background: #86BB71;
+    clear: both;
+}
+
+.message-item.right .message-bubble {
+    float: right;
+    background: #94C2ED;
+    clear: both;
+}
+
+.message-item.left .message-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 28px;
+    border: 12px solid transparent;
+    border-bottom-color: #86BB71;
+    border-top: 0;
+}
+
+.message-item.right .message-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 28px;
+    border: 12px solid transparent;
+    border-bottom-color: #94C2ED;
+    border-top: 0;
+}
+
+/* === STATUS INDICATORS === */
+.status-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.status-icon.online {
+    order: 1;
+    background: #86BB71;
+}
+
+.status-icon.offline {
+    background: #e58964;
+}
+
+.status-icon.me {
+    order: 3;
+    background: #94C2ED;
+}
+
+.user-avatar .status-icon {
+    position: absolute;
+    bottom: 5.5px;
+    right: -5.5px;
+    width: 12.5px;
+    height: 12.5px;
+    border: 2px solid #3a3d4a;
+    border-radius: 50%;
+}
+
+/* === INTERACTIVE ELEMENTS === */
+.favorite-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.search-button svg {
+    transition: fill 0.2s;
+}
+
+.search-button:hover svg path {
+    fill: #86BB71;
+}
+
+.favorite-button:hover svg path {
+    stroke: #d8dadf;
+}
+
+.favorite-button.active svg path {
+    stroke: #d8dadf;
+    fill: #d8dadf;
+}
+
+.favorite-button svg {
+    transition: all 0.2s;
+}
+
+/* === TEXT STYLES === */
+.message-item.left .sender-name {
+    order: 2;
+    margin: 0 10px 0 6px;
+}
+
+.message-item.left .message-time {
+    order: 3;
+    color: #a8aab1;
+}
+
+.message-item.right .message-time {
+    order: 1;
+    color: #a8aab1;
+    margin-right: 10px;
+}
+
+.message-item.right .sender-name {
+    order: 2;
+    margin-right: 6px;
+}

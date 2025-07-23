@@ -1,0 +1,50 @@
+[
+    { 
+        "name": "Виктор Иванов", 
+        "status": "online", 
+        "lastSeen": "", 
+        "avatar": "https://i.pravatar.cc/150?img=8" 
+    },
+    { 
+        "name": "Адрей Гагарин", 
+        "status": "offline", 
+        "lastSeen": "7 минут назад", 
+        "avatar": "https://i.pravatar.cc/150?img=11" 
+    },
+    { 
+        "name": "Михаил Толмачев", 
+        "status": "online", 
+        "lastSeen": "", "avatar": 
+        "https://i.pravatar.cc/150?img=60" 
+    },
+    { 
+        "name": "Настя Ушакова", 
+        "status": "online", 
+        "lastSeen": "", 
+        "avatar": "https://i.pravatar.cc/150?img=5" 
+    },
+    { 
+        "name": "Евгения Барышникова", 
+        "status": "online", 
+        "lastSeen": "", 
+        "avatar": "https://i.pravatar.cc/150?img=47" 
+    },
+    { 
+        "name": "Тамара Плотникова", 
+        "status": "offline", 
+        "lastSeen": "30 минут назад", 
+        "avatar": "https://i.pravatar.cc/150?img=32" 
+    },
+    { 
+        "name": "Кирилл Аникеев", 
+        "status": "offline", 
+        "lastSeen": "10 часов назад", 
+        "avatar": "https://i.pravatar.cc/150?img=53" 
+    },
+    { 
+        "name": "Марина Пух", 
+        "status": "online", 
+        "lastSeen": "", 
+        "avatar": "https://i.pravatar.cc/150?img=36" 
+    }
+]
