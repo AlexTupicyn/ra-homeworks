@@ -42,3 +42,4 @@ const handleSelect = async (evt) => {
     // У вас в массиве - dataUrl, можете использовать в качестве значения атрибута src тега img
 }
 ```
+[Решение] (ra-homeworks-4-3)
