@@ -1,0 +1,88 @@
+/* ================================
+   Layout and Container Styles
+   ================================ */
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.example {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.collapse-container {
+  max-width: 600px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   Typography
+   ================================ */
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+.example h2 {
+  margin-top: 0;
+  color: #4a76a8;
+}
+
+
+/* ================================
+   Collapse Button Styles
+   ================================ */
+.collapse-button {
+  background-color: #4a76a8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.collapse-button:hover {
+  background-color: #3a5f8a;
+}
+
+
+/* ================================
+   Collapse Content Styles
+   ================================ */
+.collapse-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.collapse-content.collapsed {
+  max-height: 0;
+  padding: 0 15px;
+}
+
+.collapse-content.expanded {
+  max-height: 1000px;
+  padding: 15px;
+}
+
+.collapse-content-inner {
+  padding: 5px;
+}
